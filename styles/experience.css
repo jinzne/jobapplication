@@ -1,0 +1,32 @@
+#userinput {
+    border-style: solid;
+    border-width: 2px;
+}
+
+ul li { padding: 5px 0px; }
+
+body {
+    background: url('https://gnguyen.greenriverdev.com/Sdev328/jobapplication/images/bg.jpeg') no-repeat center;
+    background-size: cover;
+}
+
+.button {
+    background: rgb(237, 40, 70);
+    border-radius: 5px;
+    padding: 15px 25px;
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+}
+
+.form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 50%;
+    text-align: left;
+}
