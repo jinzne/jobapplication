@@ -1,12 +1,17 @@
 {
-  "name": "jinzne/Sdev328/jobapplication",
+  "name": "admin/jobapplication",
+  "autoload": {
+    "psr-4": {
+      "Admin\\Jobapplication\\": "src/"
+    }
+  },
   "authors": [
     {
-      "name": "Giang Nguyen",
-      "email": "nguyen.giang.2@student.greenriver.edu"
+      "name": "GiangNguyen",
+      "email": "example@gmail.com"
     }
   ],
   "require": {
-    "bcosca/fatfree-core": "dev-master"
+    "bcosca/fatfree-core": "^3.8"
   }
 }
