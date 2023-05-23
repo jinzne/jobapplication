@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <title>Summary</title>
     <include href="views/includes/header.html"></include>
-    <link rel="stylesheet" href="https://gnguyen.greenriverdev.com/Sdev328/jobapplication/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
 <h1>Summary</h1>
@@ -17,39 +17,39 @@
     <tbody>
     <tr>
         <td>Name</td>
-        <td>{{ @fname }}</td>
+        <td>{{ @SESSION.fname }}</td>
     </tr>
     <tr>
         <td>Email</td>
-        <td>{{ @email }}</td>
+        <td>{{ @SESSION.email }}</td>
     </tr>
     <tr>
         <td>State</td>
-        <td>{{ @state }}</td>
+        <td>{{ @SESSION.state }}</td>
     </tr>
     <tr>
         <td>Phone</td>
-        <td>{{ @phone }}</td>
+        <td>{{ @SESSION.phone }}</td>
     </tr>
     <tr>
         <td>Github link</td>
-        <td>{{ @github }}</td>
+        <td>{{ @SESSION.github }}</td>
     </tr>
     <tr>
         <td>Experience</td>
-        <td>{{ @experience }}</td>
+        <td>{{ @SESSION.experience }}</td>
     </tr>
     <tr>
         <td>Willing To Relocate</td>
-        <td>{{ @relocate }}</td>
+        <td>{{ @SESSION.relocate }}</td>
     </tr>
     <tr>
         <td>Mailing Lists</td>
-        <td>{{ @check_box }}</td>
+        <td>{{ @SESSION.check_box }}</td>
     </tr>
     <tr>
         <td>Biography</td>
-        <td>{{ @bio }}</td>
+        <td>{{ @SESSION.bio }}</td>
     </tbody>
 
 </table>
