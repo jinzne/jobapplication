@@ -2,7 +2,10 @@
   "name": "admin/jobapplication",
   "autoload": {
     "psr-4": {
-      "Admin\\Jobapplication\\": "src/"
+      "App\\": "/",
+      "App\\Controllers\\": "src/Controllers/",
+      "App\\Models\\": "src/Models/",
+      "App\\Classes\\": "src/Classes/"
     }
   },
   "authors": [

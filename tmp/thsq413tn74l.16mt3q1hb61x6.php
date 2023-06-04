@@ -9,7 +9,7 @@
 
 <head>
   <title> GenZ LLC</title>
-  <link rel="stylesheet" href="https://gnguyen.greenriverdev.com/Sdev328/jobapplication/styles/styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 
 </head>
 
@@ -35,7 +35,7 @@
   </div>
   <div id="main">
     <h2> About the internship</h2>
-    <img src="https://gnguyen.greenriverdev.com/Sdev328/jobapplication/images/genZ.jpeg" height="442" width="605"/>
+    <img src="./images/genZ.jpeg" height="442" width="605"/>
     <p>
       To reinvent an industry, you have to build the best team.
       Join GenZ if you want to bring groundbreaking professional 3D printers to the desktop of every designer,

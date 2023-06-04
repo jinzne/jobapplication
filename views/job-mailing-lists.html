@@ -1,0 +1,85 @@
+<!-- Giang Nguyen
+    Date: 05/06/2023
+    File name: job-mailing.html
+    Job openings and mailing lists page for job application
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Openings Mailling Lists</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/mailling lists.css">
+    <include href="views/includes/header.html"></include>
+</head>
+
+<body>
+<check if="{{ @Errors }}">
+    <div class="error-box">
+        <pre>{{ @Errors }}</pre>
+    </div>
+</check>
+<h1>Job Openings Mailing Lists</h1>
+<form action="job-mailing-lists" method="post">
+    <div class="row">
+        <ul>
+            <li>
+                <h3>Software Development Jobs</h3>
+            </li>
+            <li>
+                <input type="checkbox" name="check-jobs[]" value="JavaScript" /> <span>JavaScript</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-jobs[]" value="HTML" /> <span>HTML</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-jobs[]" value="PHP" /> <span>PHP</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-jobs[]" value="CSS" /> <span>CSS</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-jobs[]" value="Java" /> <span>Java</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-jobs[]" value="ReactJS" /> <span>ReactJS</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-jobs[]" value="Python" /> <span>Python</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-jobs[]" value="NodeJs" /> <span>NodeJs</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3>Industry Verticals</h3>
+            </li>
+            <li>
+                <input type="checkbox" name="check-verticals[]" value="SaaS" /> <span>SaaS</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-verticals[]" value="Industrial tech" /> <span>Industrial
+                        tech</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-verticals[]" value="Health Tech" /> <span>Health Tech</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-verticals[]" value="Cybersecurity" /> <span>Cybersecurity</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-verticals[]" value="Ag tech" /> <span>Ag tech</span>
+            </li>
+            <li>
+                <input type="checkbox" name="check-verticals[]" value="HR tech" /> <span>HR tech</span>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <button class="button">NEXT</button>
+</form>
+</body>
+
+</html>

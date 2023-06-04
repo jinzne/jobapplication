@@ -16,26 +16,31 @@
 </head>
 
 <body>
-    <check if="{{ @SESSION.Errors }}">
-        <div class="error-box">
-            <pre>{{ @SESSION.Errors }}</pre>
-        </div>
-    </check>
+<check if="{{ @Errors }}">
+    <div class="error-box">
+        <pre>{{ @Errors }}</pre>
+    </div>
+</check>
 <div id="svg_wrap"></div>
-    <h1>Personal Information </h1>
-<form action="personal-info" method="POST">
+<h1>Personal Information </h1>
+<form action="personal-info" method="POST" enctype="multipart/form-data">
     <section>
-        <input type="text" placeholder="Firstname" name="fname" value="{{ @SESSION.fname }}" required/>
-        <input type="text" placeholder="Lastname" name="lname" value="{{ @SESSION.lname }}" required/>
-        <input type="text" placeholder="State" name="state" value="{{ @SESSION.state }}" />
+        <input type="text" placeholder="Firstname" name="fname" value="{{ @applicant->getFname() }}" required />
+        <input type="text" placeholder="Lastname" name="lname" value="{{ @applicant->getLname() }}" required />
+        <input type="text" placeholder="State" name="state" value="{{ @applicant->getState() }}" />
     </section>
     <section>
-        <p>Contact information</p>
-        <input type="text" placeholder="Email address" name="email" value="{{ @SESSION.email }}" required/>
-        <input type="text" placeholder="Phone: 0123456789" name="phone" value="{{ @SESSION.phone }}" required/>
-        <input type="text" placeholder="Mobile: 0123456789" name="mobile" value="{{ @SESSION.mobile }}" />
+        <h1>Contact information </h1>
+        <input type="text" placeholder="Email address" name="email" value="{{ @applicant->getEmail() }}" required />
+        <input type="text" placeholder="Phone: 0123456789" name="phone" value="{{ @applicant->getPhone() }}"
+               required />
+        <input type="file" name="avatar" accept="image/png, image/jpeg, image/jpg">
+        <div class="row">
+            <input type="checkbox" name="sign-up-mailing-lists" id="sign-up-mailing-lists" {{ @sign_up_mailing_lists ? 'checked="checked"' : ' ' }}>
+            <label for="sign-up-mailing-lists">Sign me up for job openings mailing list!</label>
+        </div>
     </section>
-    <button class="button" >NEXT</button>
+    <button class="button">NEXT</button>
 </form>
 </body>
 

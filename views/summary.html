@@ -5,53 +5,68 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Summary</title>
     <include href="views/includes/header.html"></include>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body>
 <h1>Summary</h1>
 <table>
     <tbody>
+    <check if="{{ @sign_up_mailing_lists }}">
+        <true>
+            <tr>
+                <td>Avatar</td>
+                <td><img class="avatar" src="{{ @applicant->getAvatar() }}" alt=""></td>
+            </tr>
+        </true>
+    </check>
     <tr>
         <td>Name</td>
-        <td>{{ @SESSION.fname }}</td>
+        <td>{{ @applicant->getName() }}</td>
     </tr>
     <tr>
         <td>Email</td>
-        <td>{{ @SESSION.email }}</td>
+        <td>{{ @applicant->getEmail() }}</td>
     </tr>
     <tr>
         <td>State</td>
-        <td>{{ @SESSION.state }}</td>
+        <td>{{ @applicant->getState() }}</td>
     </tr>
     <tr>
         <td>Phone</td>
-        <td>{{ @SESSION.phone }}</td>
+        <td>{{ @applicant->getPhone() }}</td>
     </tr>
     <tr>
         <td>Github link</td>
-        <td>{{ @SESSION.github }}</td>
+        <td>{{ @applicant->getGithub() }}</td>
     </tr>
     <tr>
         <td>Experience</td>
-        <td>{{ @SESSION.experience }}</td>
+        <td>{{ @applicant->getExperience() }}</td>
     </tr>
     <tr>
         <td>Willing To Relocate</td>
-        <td>{{ @SESSION.relocate }}</td>
+        <td>{{ @applicant->getRelocate() }}</td>
     </tr>
-    <tr>
-        <td>Mailing Lists</td>
-        <td>{{ @SESSION.check_box }}</td>
-    </tr>
+    <check if="{{ @sign_up_mailing_lists }}">
+        <true>
+            <tr>
+                <td>Mailing Lists</td>
+                <td>{{ @applicant->textJobsAndVerticals() }}</td>
+            </tr>
+        </true>
+    </check>
     <tr>
         <td>Biography</td>
-        <td>{{ @SESSION.bio }}</td>
+        <td>{{ @applicant->getBio() }}</td>
     </tbody>
 
 </table>
 </body>
+
 </html>

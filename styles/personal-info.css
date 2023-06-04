@@ -5,7 +5,7 @@ html {
 }
 body {
     background-size:auto 100%;
-    background: url('https://gnguyen.greenriverdev.com/Sdev328/jobapplication/images/bg.jpeg') no-repeat;
+    background: url('../images/bg.jpeg') no-repeat;
     background-position: center;
     text-align: center;
     font-family: 'Noto Sans', sans-serif;
@@ -81,4 +81,24 @@ input {
 p{
     text-align:justify;
     margin-top:0;
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.row > input {
+    padding: 0;
+    width: 15px;
+    height: 15px;
+}
+
+.row > label {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: grey;
+    cursor: pointer;
 }
